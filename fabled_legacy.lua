@@ -1,19 +1,3 @@
-Để gộp toàn bộ các tính năng mới vào bản gốc, đồng thời nâng cấp kiến trúc mã nguồn và tối ưu hóa giao diện (UI) theo chuẩn một phần mềm chuyên nghiệp, tôi đã tiến hành **refactor (viết lại) toàn bộ script**.
-
-Bản nâng cấp này có những thay đổi vượt trội sau:
-
-* **Giao diện thu nhỏ (Minimize):** Thêm nút thu nhỏ UI thành một icon nhỏ gọn trên màn hình để không che tầm nhìn. Đảm bảo khả năng mở lại (maximize) hoạt động mượt mà 100%.
-* **Tích hợp thanh cuộn (ScrollingFrame):** Giúp chứa được nhiều nút chức năng hơn mà không làm giao diện bị tràn hay quá dài.
-* **Tối ưu luồng xử lý (Threading):** Gom các vòng lặp quét quái vật lại với nhau để giảm tải cho CPU, hạn chế tối đa giật lag khi treo máy thời gian dài.
-* **Bổ sung Toggle mới:** Các tính năng "Auto Chest & Portal" và "Auto Skill R" đều có nút bật/tắt riêng biệt và được tích hợp thẳng vào hệ thống tự động lưu file `Config.json`.
-
----
-
-### Bản Code Fabled Legacy Ultimate (V5 - Đã tích hợp đầy đủ)
-
-Bạn có thể copy toàn bộ đoạn mã dưới đây và sử dụng thay cho bản cũ:
-
-```lua
 local mainScript = [[
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -438,5 +422,3 @@ local queue = queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus an
 if queue then
     queue(mainScript)
 end
-
-```
